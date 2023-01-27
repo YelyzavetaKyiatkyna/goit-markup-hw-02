@@ -8,6 +8,7 @@
   --light-color: #f4f4fd;
   --modal-overlay-color: #2e2f42;
   --hero-background: #2e2f42;
+  --text-color: #434455;
 }
 
 body {
@@ -23,13 +24,16 @@ body {
   list-style: none;
 }
 .visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
   position: absolute;
   white-space: nowrap;
   width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 /*--------------------HEADER---------------------*/
@@ -65,11 +69,13 @@ body {
   color: var(--dark-color);
 }
 .header-link:hover,
-.header-link:focus {
+.header-link:focus,
+.header-link.current {
   color: var(--pressed-state-color);
 }
 
 .header-address {
+  font-style: normal;
 }
 .header-address-list {
 }
@@ -94,7 +100,6 @@ body {
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  text-align: center;
   letter-spacing: 0.02em;
   color: #ffffff;
 }
@@ -108,6 +113,15 @@ body {
   letter-spacing: 0.04em;
   color: #ffffff;
   cursor: pointer;
+  background: #4d5ae5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.hero-btn:hover {
+  background: #404bbf;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: #ffffff;
 }
 
 /*--------------------FEATURES---------------------*/
@@ -140,7 +154,6 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-  text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--dark-color);
@@ -156,7 +169,6 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-  text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--dark-color);
@@ -164,19 +176,18 @@ body {
 .team-list {
 }
 .team-item {
+  background-color: #ffffff;
 }
 .team-item-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  text-align: center;
   letter-spacing: 0.02em;
   color: var(--dark-color);
 }
 .team-item-text {
   font-size: 16px;
   line-height: 1.5;
-  text-align: center;
   letter-spacing: 0.02em;
   color: inherit;
 }
@@ -224,6 +235,17 @@ body {
   letter-spacing: 0.04em;
   color: var(--primary-brand-color);
   cursor: pointer;
+  background: #f4f4fd;
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
+}
+
+.portfolio-item-btn:hover {
+  color: #ffffff;
+  background: #404bbf;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 .portfolio-box {
 }
